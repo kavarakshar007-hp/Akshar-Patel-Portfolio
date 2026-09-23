@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --color-canvas: #f1f5f9;
+    --color-surface: #ffffff;
+    --color-slate-dark: #1a2433;
+    --color-slate-mid: #334155;
+    --color-slate-light: #64748b;
+    --color-cherry: #e11d48;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-canvas);
+    color: var(--color-slate-dark);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Swiss Editorial & Brutalist Offset Shadows */
+.shadow-brutal-sm {
+  box-shadow: 2px 2px 0 #334155;
+}
+
+.shadow-brutal {
+  box-shadow: 4px 4px 0 #334155;
+}
+
+.shadow-brutal-cherry {
+  box-shadow: 4px 4px 0 #e11d48;
+}
+
+.shadow-brutal-lg {
+  box-shadow: 6px 6px 0 #334155;
+}
+
+.hover-shadow-brutal {
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-shadow-brutal:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #334155;
+}
+
+/* Grayscale to Color Reveal signature */
+.grayscale-reveal {
+  filter: grayscale(100%);
+  transition: filter 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.grayscale-reveal:hover,
+.grayscale-reveal:focus-within,
+.group:hover .grayscale-reveal {
+  filter: grayscale(0%);
+}
+
+/* Subtle dot grid pattern */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(100, 116, 139, 0.2) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism restrained */
+.glass-surface {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

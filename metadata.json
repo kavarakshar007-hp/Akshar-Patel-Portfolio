@@ -1,0 +1,8 @@
+{
+  "name": "thatsakki - Kavar Akshar Portfolio",
+  "description": "Portfolio of Kavar Akshar (@thatsakki), a Computer Science Engineering student at MSU Baroda exploring software development, communities, events and technology.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
